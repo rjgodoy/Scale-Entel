@@ -26,7 +26,6 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var regionXIButton: UIButton!
     @IBOutlet weak var regionXIIButton: UIButton!
     
-    
     //Colores
     let normalColor = UIColor(red: 28/255, green: 132/255, blue: 198/255, alpha: 1)
     let alertColor = UIColor(red: 1, green: 128/255, blue: 0, alpha: 1)
@@ -44,7 +43,7 @@ class FirstViewController: UIViewController {
         
         //Bordes de los botones
         for button in regionButton {
-            button.layer.cornerRadius = 5.0
+            button.layer.cornerRadius = 6.0
         }
         
         
@@ -68,7 +67,10 @@ class FirstViewController: UIViewController {
                 regionButton[i].backgroundColor = normalColor
                 i=i+1
             } else if sitiosAlarmados >= 10 {
-                regionButton[i].backgroundColor = dangerColor
+                UIButton.animateWithDuration(1.0, delay: 0.0, options: [.Repeat, .Autoreverse], animations: {
+                    regionButton[i].backgroundColor = self.alertColor
+                    regionButton[i].backgroundColor = self.dangerColor
+                    }, completion: nil)
                 i=i+1
             } else {
                 regionButton[i].backgroundColor = alertColor

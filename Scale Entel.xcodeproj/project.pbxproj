@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A0FE2E91CCFB036001C3627 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0FE2E81CCFB036001C3627 /* MapKit.framework */; };
 		4A81D9BB1CCE21A20052A681 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A81D9BA1CCE21A20052A681 /* AppDelegate.swift */; };
 		4A81D9BD1CCE21A20052A681 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A81D9BC1CCE21A20052A681 /* FirstViewController.swift */; };
 		4A81D9BF1CCE21A20052A681 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A81D9BE1CCE21A20052A681 /* SecondViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A0FE2E81CCFB036001C3627 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4A81D9B71CCE21A20052A681 /* Scale Entel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scale Entel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A81D9BA1CCE21A20052A681 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A81D9BC1CCE21A20052A681 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A0FE2E91CCFB036001C3627 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +82,7 @@
 		4A81D9AE1CCE21A10052A681 = {
 			isa = PBXGroup;
 			children = (
+				4A0FE2E81CCFB036001C3627 /* MapKit.framework */,
 				4A81D9B91CCE21A20052A681 /* Scale Entel */,
 				4A81D9D01CCE21A20052A681 /* Scale EntelTests */,
 				4A81D9DB1CCE21A20052A681 /* Scale EntelUITests */,
@@ -197,6 +201,14 @@
 					4A81D9B61CCE21A20052A681 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = H82EYRSEJT;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					4A81D9CC1CCE21A20052A681 = {
 						CreatedOnToolsVersion = 7.3;
@@ -491,6 +503,7 @@
 				4A81D9E31CCE21A20052A681 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A81D9E41CCE21A20052A681 /* Build configuration list for PBXNativeTarget "Scale EntelTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +512,7 @@
 				4A81D9E61CCE21A20052A681 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A81D9E71CCE21A20052A681 /* Build configuration list for PBXNativeTarget "Scale EntelUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +521,7 @@
 				4A81D9E91CCE21A20052A681 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
