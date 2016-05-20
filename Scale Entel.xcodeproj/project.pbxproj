@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4A0FE2E91CCFB036001C3627 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0FE2E81CCFB036001C3627 /* MapKit.framework */; };
+		4A282CEA1CEE1BDB00485594 /* GetAlarmas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A282CE91CEE1BDB00485594 /* GetAlarmas.swift */; };
+		4A282CEC1CEE4EB300485594 /* GetAlarmasRegiones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A282CEB1CEE4EB300485594 /* GetAlarmasRegiones.swift */; };
+		4A282CEE1CEE4F4B00485594 /* GetAlarmasComunas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A282CED1CEE4F4B00485594 /* GetAlarmasComunas.swift */; };
 		4A81D9BB1CCE21A20052A681 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A81D9BA1CCE21A20052A681 /* AppDelegate.swift */; };
 		4A81D9BD1CCE21A20052A681 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A81D9BC1CCE21A20052A681 /* FirstViewController.swift */; };
 		4A81D9BF1CCE21A20052A681 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A81D9BE1CCE21A20052A681 /* SecondViewController.swift */; };
@@ -37,6 +40,9 @@
 
 /* Begin PBXFileReference section */
 		4A0FE2E81CCFB036001C3627 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4A282CE91CEE1BDB00485594 /* GetAlarmas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAlarmas.swift; sourceTree = "<group>"; };
+		4A282CEB1CEE4EB300485594 /* GetAlarmasRegiones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAlarmasRegiones.swift; sourceTree = "<group>"; };
+		4A282CED1CEE4F4B00485594 /* GetAlarmasComunas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAlarmasComunas.swift; sourceTree = "<group>"; };
 		4A81D9B71CCE21A20052A681 /* Scale Entel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scale Entel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A81D9BA1CCE21A20052A681 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A81D9BC1CCE21A20052A681 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +112,9 @@
 				4A81D9BA1CCE21A20052A681 /* AppDelegate.swift */,
 				4A81D9BC1CCE21A20052A681 /* FirstViewController.swift */,
 				4A81D9BE1CCE21A20052A681 /* SecondViewController.swift */,
+				4A282CE91CEE1BDB00485594 /* GetAlarmas.swift */,
+				4A282CEB1CEE4EB300485594 /* GetAlarmasRegiones.swift */,
+				4A282CED1CEE4F4B00485594 /* GetAlarmasComunas.swift */,
 				4A81D9C01CCE21A20052A681 /* Main.storyboard */,
 				4A81D9C31CCE21A20052A681 /* Assets.xcassets */,
 				4A81D9C51CCE21A20052A681 /* LaunchScreen.storyboard */,
@@ -274,9 +283,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A282CEC1CEE4EB300485594 /* GetAlarmasRegiones.swift in Sources */,
+				4A282CEA1CEE1BDB00485594 /* GetAlarmas.swift in Sources */,
 				4A81D9BF1CCE21A20052A681 /* SecondViewController.swift in Sources */,
 				4A81D9BB1CCE21A20052A681 /* AppDelegate.swift in Sources */,
 				4A81D9BD1CCE21A20052A681 /* FirstViewController.swift in Sources */,
+				4A282CEE1CEE4F4B00485594 /* GetAlarmasComunas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

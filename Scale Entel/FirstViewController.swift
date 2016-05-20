@@ -31,38 +31,38 @@ class FirstViewController: UIViewController {
     let alertColor = UIColor(red: 1, green: 128/255, blue: 0, alpha: 1)
     let dangerColor = UIColor(red: 254/255, green: 43/255, blue: 2/255, alpha: 1)
     
+    var values:[AnyObject] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
+
         //Array 1: Regiones
         let regionButton = [regionXVButton, regionIButton, regionIIButton, regionIIIButton, regionIVButton, regionVButton, regionMButton, regionVIButton, regionVIIButton, regionVIIIButton, regionIXButton, regionXIVButton, regionXButton, regionXIButton, regionXIIButton]
         
-        
         //Bordes de los botones
-        for button in regionButton {
-            button.layer.cornerRadius = 6.0
+        /*for button in regionButton {
+            button.layer.cornerRadius = 0.0
+        }*/
+        
+        //Mostrar numero de sitios alarmados por región obtenidos de la base de datos Scale
+        var j = 0
+        for dbAlarmas in regionButton {
+            var index = GetAlarmasRegiones()
+            dbAlarmas.setTitle(String(index.getAlarmasRegiones()[j]), forState: UIControlState.Normal)
+            j += 1
         }
-        
-        
-        //Obtener numero de sitios alarmadoss de la base de datos Scale
-        /*for dbAlarmas in regionButton {
-         dbAlarmas.setTitle("", forState: UIControlState.Normal)
-         }*/
-        
         
         //Array 2: Cantidad de sitios alarmados por región
-        var qSitiosAlarmadosPorRegion = [Int]()
+        var cantidadSitiosAlarmadosPorRegion:[Int] = []
         for region in regionButton {
-            qSitiosAlarmadosPorRegion.append(Int(region.titleLabel!.text!)!)
+            cantidadSitiosAlarmadosPorRegion.append(Int(region.titleLabel!.text!)!)
         }
-        
         
         //Cambia color del boton según número de sitios en Array 2
         var i = 0
-        for sitiosAlarmados in qSitiosAlarmadosPorRegion {
+        for sitiosAlarmados in cantidadSitiosAlarmadosPorRegion {
             if sitiosAlarmados == 0 {
                 regionButton[i].backgroundColor = normalColor
                 i=i+1
@@ -71,20 +71,24 @@ class FirstViewController: UIViewController {
                     regionButton[i].backgroundColor = self.alertColor
                     regionButton[i].backgroundColor = self.dangerColor
                     }, completion: nil)
-                i=i+1
+                i += 1
             } else {
                 regionButton[i].backgroundColor = alertColor
-                i=i+1
+                i += 1
             }
         }
-
         
+        var nombreRegion = GetAlarmasRegiones()
+        print(nombreRegion.getNombreRegion())
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     @IBAction func regionXVButtonPressed(sender: UIButton) {
     }
