@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct GetAlarm {
+struct Getaatos {
     
     var valuesRegion:[AnyObject] = []
     var valuesComuna:[AnyObject] = []

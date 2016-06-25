@@ -13,7 +13,7 @@ struct GetAlarmasComunas {
     var valuesComuna:[AnyObject] = []
     
     //Obtener datos de la base de datos Scale para alarmas por Comuna
-    mutating func getAlarmasComunas() -> Array<AnyObject> {
+    mutating func getAlarmasComunas() -> [AnyObject] {
         let url = NSURL(string: "http://localhost/scaleapp/getComunas.php")
         let data = NSData(contentsOfURL: url!)
         valuesComuna = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! Array

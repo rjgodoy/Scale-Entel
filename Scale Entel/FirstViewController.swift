@@ -48,9 +48,9 @@ class FirstViewController: UIViewController {
         
         //Mostrar numero de sitios alarmados por región obtenidos de la base de datos Scale
         var j = 0
-        for dbAlarmas in regionButton {
-            var index = GetAlarmasRegiones()
-            dbAlarmas.setTitle(String(index.getAlarmasRegiones()[j]), forState: UIControlState.Normal)
+        for alarmas in regionButton {
+            let index = GetDatos()
+            alarmas.setTitle(index.getDatosNacional(j, dato: "alarmas"), forState: UIControlState.Normal)
             j += 1
         }
         
@@ -78,9 +78,6 @@ class FirstViewController: UIViewController {
             }
         }
         
-        var nombreRegion = GetAlarmasRegiones()
-        print(nombreRegion.getNombreRegion())
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -89,53 +86,141 @@ class FirstViewController: UIViewController {
     }
     
     
-    
     @IBAction func regionXVButtonPressed(sender: UIButton) {
+        let comunas = GetDatos()
+        let comuna = comunas.getDatosRegion(1, dato: "comuna")
+        let alarma = comunas.getDatosRegion(1, dato: "alarmas")
+        for item in 0...comuna.count-1 {
+            print(comuna[item],": ",alarma[item])
+        }
+        
     }
     
     @IBAction func regionIButtonPressed(sender: UIButton) {
+        let comunas = GetDatos()
+        let comuna = comunas.getDatosRegion(2, dato: "comuna")
+        let alarma = comunas.getDatosRegion(2, dato: "alarmas")
+        for item in 0...comuna.count-1 {
+            print(comuna[item],": ",alarma[item])
+        }
     }
     
     @IBAction func regionIIButtonPressed(sender: UIButton) {
+        let comunas = GetDatos()
+        let comuna = comunas.getDatosRegion(3, dato: "comuna")
+        let alarma = comunas.getDatosRegion(3, dato: "alarmas")
+        for item in 0...comuna.count-1 {
+            print(comuna[item],": ",alarma[item])
+        }
     }
     
     @IBAction func regionIIIButtonPressed(sender: UIButton) {
+        let comunas = GetDatos()
+        let comuna = comunas.getDatosRegion(4, dato: "comuna")
+        let alarma = comunas.getDatosRegion(4, dato: "alarmas")
+        for item in 0...comuna.count-1 {
+            print(comuna[item],": ",alarma[item])
+        }
     }
     
     @IBAction func regionIVButtonPressed(sender: UIButton) {
+        let comunas = GetDatos()
+        let comuna = comunas.getDatosRegion(5, dato: "comuna")
+        let alarma = comunas.getDatosRegion(5, dato: "alarmas")
+        for item in 0...comuna.count-1 {
+            print(comuna[item],": ",alarma[item])
+        }
     }
     
     @IBAction func regionVButtonPressed(sender: UIButton) {
+        let comunas = GetDatos()
+        let comuna = comunas.getDatosRegion(6, dato: "comuna")
+        let alarma = comunas.getDatosRegion(6, dato: "alarmas")
+        for item in 0...comuna.count-1 {
+            print(comuna[item],": ",alarma[item])
+        }
     }
 
     @IBAction func regionMButtonPressed(sender: UIButton) {
+        let comunas = GetDatos()
+        let comuna = comunas.getDatosRegion(7, dato: "comuna")
+        let alarma = comunas.getDatosRegion(7, dato: "alarmas")
+        for item in 0...comuna.count-1 {
+            print(comuna[item],": ",alarma[item])
+        }
     }
 
     @IBAction func regionVIButtonPressed(sender: UIButton) {
+        let comunas = GetDatos()
+        let comuna = comunas.getDatosRegion(8, dato: "comuna")
+        let alarma = comunas.getDatosRegion(8, dato: "alarmas")
+        for item in 0...comuna.count-1 {
+            print(comuna[item],": ",alarma[item])
+        }
     }
     
     @IBAction func regionVIIButtonPressed(sender: UIButton) {
+        let comunas = GetDatos()
+        let comuna = comunas.getDatosRegion(9, dato: "comuna")
+        let alarma = comunas.getDatosRegion(9, dato: "alarmas")
+        for item in 0...comuna.count-1 {
+            print(comuna[item],": ",alarma[item])
+        }
     }
     
     @IBAction func regionVIIIButtonPressed(sender: UIButton) {
+        let comunas = GetDatos()
+        let comuna = comunas.getDatosRegion(10, dato: "comuna")
+        let alarma = comunas.getDatosRegion(10, dato: "alarmas")
+        for item in 0...comuna.count-1 {
+            print(comuna[item],": ",alarma[item])
+        }
     }
     
     @IBAction func regionIXButtonPressed(sender: UIButton) {
+        let comunas = GetDatos()
+        let comuna = comunas.getDatosRegion(11, dato: "comuna")
+        let alarma = comunas.getDatosRegion(11, dato: "alarmas")
+        for item in 0...comuna.count-1 {
+            print(comuna[item],": ",alarma[item])
+        }
     }
     
     @IBAction func regionXIVButtonPressed(sender: UIButton) {
+        let comunas = GetDatos()
+        let comuna = comunas.getDatosRegion(12, dato: "comuna")
+        let alarma = comunas.getDatosRegion(12, dato: "alarmas")
+        for item in 0...comuna.count-1 {
+            print(comuna[item],": ",alarma[item])
+        }
     }
     
     @IBAction func regionXButtonPressed(sender: UIButton) {
+        let comunas = GetDatos()
+        let comuna = comunas.getDatosRegion(13, dato: "comuna")
+        let alarma = comunas.getDatosRegion(13, dato: "alarmas")
+        for item in 0...comuna.count-1 {
+            print(comuna[item],": ",alarma[item])
+        }
     }
     
     @IBAction func regionXIButtonPressed(sender: UIButton) {
+        let comunas = GetDatos()
+        let comuna = comunas.getDatosRegion(14, dato: "comuna")
+        let alarma = comunas.getDatosRegion(14, dato: "alarmas")
+        for item in 0...comuna.count-1 {
+            print(comuna[item],": ",alarma[item])
+        }
     }
     
     @IBAction func regionXIIButtonPressed(sender: UIButton) {
+        let comunas = GetDatos()
+        let comuna = comunas.getDatosRegion(15, dato: "comuna")
+        let alarma = comunas.getDatosRegion(15, dato: "alarmas")
+        for item in 0...comuna.count-1 {
+            print(comuna[item],": ",alarma[item])
+        }
     }
-    
-    
     
 }
 
